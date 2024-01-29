@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
-import Logo from "./shared/Logo";
+
+import { navLinks } from "@/app/utils/constants"
+import Logo from "./Logo";
 interface Props {
   openModal: () => void;
   onClose: () => void;
@@ -22,20 +24,7 @@ export default function MobileSidebar({ openModal, onClose, isOpen }: Props) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  const navLinks = [
-    {
-      href: "#products",
-      label: "Products",
-    },
-    {
-      href: "#testimonials",
-      label: "Testimonials",
-    },
-    {
-      href: "#faq",
-      label: "FAQ",
-    },
-  ];
+
 
   return (
     <nav

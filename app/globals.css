@@ -25,3 +25,54 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.gradient-text {
+  background: linear-gradient(90deg, #8CE3E6 18.76%, rgba(150, 193, 93, 0.96) 63.51%, #F2C767 77.88%, #F38556 106.02%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 48.05%, rgba(0, 0, 0, 0.20) 48.9%), linear-gradient(180deg, rgba(49, 58, 91, 0.00) -19.57%, #313A5B 98.8%, rgba(49, 58, 91, 0.22) 130.43%);
+  
+
+} 
+.gradient-button{
+  border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.87);
+box-shadow: 0px 14px 20px 0px rgba(42, 51, 83, 0.80);
+}
+.swiper-pagination-bullets {
+  color: rgba(255,255,255,0.5) !important;
+  }
+.swiper-pagination-bullets-active {
+  color: white !important;
+  }
+.gradient-cards{
+  border-radius: 12px;
+  background: linear-gradient(180deg, #8CE3E6 0%, #91C06D 46.35%, #F39E5D 100%);
+}
+
+.gradient-card {
+
+  background: linear-gradient(114deg, rgba(49, 58, 91, 0.33) -21.49%, rgba(49, 58, 91, 0.00) 111.75%);
+  box-shadow: 50px 60px 120px 0px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(70px);  
+}
+.gradient-sm-filter{
+  background: linear-gradient(270deg, #8CE3E6 0%, #91BC60 46.77%, #F39B5C 100%);
+}
+
+.styled-button{
+  border-radius: 8px;
+border: 1px solid rgba(255, 255, 255, 0.10);
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%);
+box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.50);
+}
+
+
+/* .comp-img{
+  background-image: url("/computer.png");
+  background-repeat: no-repeat;
+} */
+ 
