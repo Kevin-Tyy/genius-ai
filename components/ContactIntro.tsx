@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 
 
 const ContactIntro = () => {
-    const scroll = useRef<HTMLElement | null>(null);
+    const scroll = useRef<any>(null);
 
     const handleArrowDown = () => {
         if (scroll.current) {

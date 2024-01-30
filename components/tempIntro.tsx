@@ -10,7 +10,7 @@ const InputBorder = styled.div`
 `;
 
 const TempIntro = () => {
-    const scroll = useRef<HTMLElement | null>(null);
+    const scroll = useRef<any>(null);
 
     const handleArrowDown = () => {
         if (scroll.current) {
