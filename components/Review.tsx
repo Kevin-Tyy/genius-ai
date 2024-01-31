@@ -27,18 +27,17 @@ const Review = () => {
                     breakpoints={{
                         640: {
                             slidesPerView: 1,
-                            spaceBetween: 0,
+                            spaceBetween: 10, 
                         },
                         768: {
                             slidesPerView: 2,
-                            spaceBetween: 5,
+                            spaceBetween: 20,
                         },
                         1024: {
                             slidesPerView: 5,
                             spaceBetween: 60,
                         },
                     }}
-
                     pagination={{ clickable: true }}
                 >
                     <SwiperNavButtons />

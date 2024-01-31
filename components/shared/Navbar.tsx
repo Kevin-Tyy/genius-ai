@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-[1720px] mx-auto">
         <nav className="w-full flex  items-center justify-between">
           <Logo />
-          <div className="w-10 grid place-content-center ml-6 md:hidden">
+          <div className="w-10 grid place-content-center ml-6 lg:hidden">
             <div
               className="flex flex-col items-end justify-center hover:bg-neutral-100/20 rounded-md transition duration-100 p-2 space-y-[7px] cursor-pointer group"
               onClick={() => setIsExpanded(true)}>
@@ -35,7 +35,7 @@ export default function Navbar() {
                   }`}></span>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-x-12">
+          <div className="hidden lg:flex items-center gap-x-12">
             <div className="">
               <ul className="text-[#636369] flex gap-x-10">
                 {navLinks.map((link) => (
