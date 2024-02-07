@@ -1,34 +1,34 @@
-import Image from 'next/image'
-import React from 'react'
-import PriceCards from './cards/PriceCards'
-
+import Image from "next/image";
+import React from "react";
+import PriceCards from "./cards/PriceCards";
+import { Switch } from "./ui/switch";
 
 const Pricing = () => {
   return (
-    <div>
-      <div>
-        <div className='md:px-auto lg:px-20 xl:px-40'>
-          <span className='flex flex-col md:flex-row md:space-x-4'>
-            <h1 className='font-semibold text-2xl  mb-2 md:mb-0md-b md:mb-0'>Pricing <span className='gradient-text'>Plan</span></h1>
-            <Image src="/union.svg" alt='union' width={180} height={2} />
-          </span>
-          <span className='flex flex-col md:flex-row justify-between'>
-            <p className="mb-4 md:w-2/3 md:mr-4">It is a long established fact that a reader will be distracted by the readable content of a <br /> page when looking at its layout.</p>
-            <div className='flex  space-x-4'>
+    <div className="px-3 md:px-16 mt-20">
+      <div className="w-full max-w-[1560px] mx-auto space-y-10">
+        <div className="space-y-6">
+          <div className="flex items-center gap-5">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">
+              Pricing <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Plans</span>
+            </h1>
+            <Image src="/union.svg" alt="union" width={180} height={2} />
+          </div>
+          <span className="flex flex-col md:flex-row justify-between">
+            <p className="text-[#F8F9FA] leading-loose">
+              It is a long established fact that a reader will be distracted by the readable content of a <br /> page when looking at its layout.
+            </p>
+            <div className="flex  space-x-4">
               <p>Pay Monthly</p>
-              <button className='flex justify-start items-center p-1 w-12 h-7 rounded-full bg-white bg-opacity-30'>
-                <div className='w-5 h-5 bg-white rounded-full'>{""}</div>
-              </button>
-              <p className='mb-2 md:mb-0'>Pay Yearly</p>
+              <Switch id="" />
+              <p className="mb-2 md:mb-0">Pay Yearly</p>
             </div>
           </span>
         </div>
-        <div>
-          <PriceCards />
-        </div>
+        <PriceCards />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Pricing
+export default Pricing;

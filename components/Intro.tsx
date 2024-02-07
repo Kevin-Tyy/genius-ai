@@ -1,68 +1,75 @@
-import Image from 'next/image';
-import React, { useRef } from 'react';
-import styled from 'styled-components';
-
-const InputBorder = styled.div`
-  border-radius: 0px 20px 20px 0px;
-  border: 1px solid white;
-  background: linear-gradient(90deg, rgba(17, 16, 24, 0.00) 0.28%, rgba(17, 16, 24, 0.51) 129.42%);
-  background-blend-mode: overlay;
-  
-`;
+import Image from "next/image";
+import React, { useRef } from "react";
+import styled from "styled-components";
 
 const Intro = () => {
   const scroll = useRef<any>(null);
+  const InputContainer = styled.div`
+    background: linear-gradient(90deg, rgba(17, 16, 24, 0) 0.28%, rgba(17, 16, 24, 0.51) 129.42%);
+  `;
 
+  const ScrollButton = styled.button`
+    filter: drop-shadow(0px -4px 4px rgba(248, 249, 250, 0.2));
+  `;
   const handleArrowDown = () => {
     if (scroll.current) {
       const rect = scroll.current.getBoundingClientRect();
       window.scrollTo({
-        // top: window.scrollY + rect.bottom,
         top: document.documentElement.scrollHeight,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   return (
     <>
-      <div className='flex flex-col md:flex-row p-8 md:p-32 h-auto md:h-[80vh]' style={{ backgroundImage: 'url("/computer.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-        <div className=" text-white ">
-          <button className='p-4 mb-4 rounded-lg space-x-3 styled-button flex items-center justify-center'>
-            <Image src="/circle.png" alt="search" width={24} height={24} />
-            <p className='block'>No #1 Tool for AI</p>
-          </button>
-          <h1 className='text-3xl md:text-5xl font-bold'>Use AI to Generate Creative</h1>
-          <h1 className='text-3xl md:text-5xl gradient-text font-semibold'>Blog Ideas & Outlines</h1>
-          <p className='text-sm mt-4 md:mt-8'>AI Copywriting is revolutionizing the way content is created. AI can create content for <br />blogs, articles, websites, social media and more.</p>
-
-          <InputBorder className='flex w-full md:w-[80%] flex-row p-4 md:p-2 justify-between items-center mt-4 md:mt-8'>
-            <div className='flex flex-row  space-x-2  items-center justify-center'>
-              <span className='gradient-border rounded-full p-2 w-8 md:w-10 h-8 md:h-10'><Image src="/search.png" alt="search" width={24} height={24} /></span>
-              <input type='text' placeholder='Write Your Email Adress' className='bg-transparent outline-none text-white md:w-48' />
+      <div className="relative px-3 md:px-12 h-auto md:h-[85vh] overflow-hidden">
+        <div className="w-full max-w-[1560px] mx-auto h-full ">
+          <div className="flex flex-col md:flex-row items-center h-full">
+            <div className=" text-white max-w-4xl">
+              <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15]  flex items-center justify-center">
+                <Image src="/circle.svg" alt="search" width={24} height={24} />
+                <p>No #1 Tool for AI</p>
+              </button>
+              <h1 className="text-3xl md:text-5xl xl:text-[58px] font-bold !leading-normal">
+                Use AI to Generate Creative{" "}
+                <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Blog Ideas & Outlines</span>
+              </h1>
+              <p className="mt-4 md:mt-8 text-lg leading-loose text-[#F8F9FA]">
+                AI Copywriting is revolutionizing the way content is created. AI can create content for <br />
+                blogs, articles, websites, social media and more.
+              </p>
+              <form>
+                <InputContainer className="flex w-full max-w-3xl flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl">
+                  <div className="w-full flex space-x-4 items-center justify-center">
+                    <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
+                      <Image src="/search.svg" alt="search" width={32} height={32} />
+                    </span>
+                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full" />
+                  </div>
+                  <button className="w-full max-w-fit gradient-border py-4 px-8 rounded-lg space-x-3 flex items-center justify-center">
+                    <Image src="/play.svg" alt="search" width={24} height={24} />
+                    <p className="hidden md:block">Start Free Trial</p>
+                  </button>
+                </InputContainer>
+              </form>
             </div>
-            <button className='gradient-border p-3 md:w-52 rounded-lg space-x-3 flex items-center justify-center'>
-              <Image src="/play.png" alt="search" width={24} height={24} />
-              <p className='hidden md:block'>Start Free Trial</p>
-            </button>
-          </InputBorder>
+          </div>
+          <div className="absolute inset-0 bg-black/40 z-[-1]" />
+          <Image
+            src="/computer.png"
+            alt="computer"
+            layout="responsive"
+            className="absolute inset-0 z-[-2] h-full w-full max-h-[85vh] object-cover"
+            width={600}
+            height={600}
+          />
         </div>
-
-        {/* <div>
-         <Image src="/computer.png" alt='computer' objectFit='cover' layout='responsive' width={600} height={600} />
-
-        </div> */}
-
       </div>
-      <div className='flex justify-center items-center' ref={scroll}>
-        <button
-          className='bg-[#141416] p-2 rounded-full -mt-[25px]'
-          onClick={handleArrowDown}
-          aria-label="Scroll down"
-        >
-          <Image src="/arrow-down.png" alt="search" width={24} height={24} />
-        </button>
-
+      <div className="flex justify-center items-center" ref={scroll}>
+        <ScrollButton className="bg-[#141416] p-7 rounded-full -mt-[25px]" onClick={handleArrowDown} aria-label="Scroll down">
+          <Image src="/arrow-down.svg" alt="search" width={28} height={28} />
+        </ScrollButton>
       </div>
     </>
   );

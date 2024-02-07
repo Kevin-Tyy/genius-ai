@@ -1,31 +1,32 @@
-import Image from 'next/image';
-import React from 'react';
-import styled from 'styled-components';
-
-const InputBorder = styled.div`
-border-radius: 0px 20px 20px 0px;
-border: 1px solid rgba(51, 66, 255, 0.00);
-background: linear-gradient(90deg, rgba(17, 16, 24, 0.00) 0.28%, rgba(17, 16, 24, 0.51) 129.42%);
-background-blend-mode: overlay;
-`
+import Image from "next/image";
+import React from "react";
 
 const Question = () => {
   return (
-    <div className='h-auto md:h-96 mt-10 flex flex-col items-center justify-center rounded-2xl mx-auto border-2 border-white  md:w-[80%]' style={{ backgroundImage: 'url("/gradient-bg.png")', backgroundSize: 'cover' }}>
-      <div>
-        <h1 className='text-2xl md:text-3xl lg:text-4xl'>Have question? <span className='gradient-text font-bold'>Call us 24/7</span></h1>
-        <p className='text-center mt-4 md:mt-8'>+91-45345217</p>
-      </div>
-      <InputBorder className='flex flex-row p-4 md:p-8 justify-between items-center mt-4 md:mt-8'>
-        <div className='flex flex-row  space-x-2  items-center justify-center'>
-          <span className='gradient-border rounded-full p-2 w-8 md:w-10 h-8 md:h-10'><Image src="/mail.svg" alt="search" width={24} height={24} /></span>
-          <input type='text' placeholder='Write Your Email Adress' className='bg-transparent outline-none text-white md:w-48' />
+    <div className="px-3 md:px-12 mt-20">
+      <div className="w-full max-w-[1560px] mx-auto h-full ">
+        <div className="w-full flex flex-col items-center justify-center rounded-3xl mx-auto bg-gradient-to-br from-[#313a5b54] to-[#313a5b00] border-2 border-[#5c6a9e30] px-10 py-20">
+          <div>
+            <h1 className="text-3xl md:text-5xl font-bold !leading-normal">
+              Have question? <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Call us 24/7</span>
+            </h1>
+            <p className="text-center mt-4 md:mt-8">+91-45345217</p>
+          </div>
+          <form className="w-full">
+            <div className="bg-gradient-to-r from-[#11101800] to-[#00000080] flex w-full max-w-3xl mx-auto flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl">
+              <div className="w-full flex space-x-4 items-center justify-center">
+                <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
+                  <Image src="/mail.svg" alt="search" width={32} height={32} />
+                </span>
+                <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full" />
+              </div>
+              <button className="w-full max-w-fit shadow-lg shadow-black gradient-border py-3 px-10 rounded-lg space-x-3 flex items-center justify-center">
+                <p className="hidden md:block">Get Started</p>
+              </button>
+            </div>
+          </form>
         </div>
-        <button className='gradient-border p-2 md:p-3 w-full md:w-32 rounded-lg md:mt-0 md:ml-4 space-x-2 flex items-center justify-center'>
-          <p>Get Started</p>
-        </button>
-      </InputBorder>
-
+      </div>
     </div>
   );
 };

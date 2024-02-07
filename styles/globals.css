@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 16, 16, 16;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@font-face {
+  font-family: "Craftwork Grotesk";
+  src: url("../fonts/craftwork-grotesk/CraftworkGrotesk-Regular.ttf");
+  font-weight: 4000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Craftwork Grotesk";
+  src: url("../fonts/craftwork-grotesk/CraftworkGrotesk-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Craftwork Grotesk";
+  src: url("../fonts/craftwork-grotesk/CraftworkGrotesk-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Craftwork Grotesk";
+  src: url("../fonts/craftwork-grotesk/CraftworkGrotesk-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Craftwork Grotesk";
+  src: url("../fonts/craftwork-grotesk/CraftworkGrotesk-Heavy.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  font-family: "Craftwork Grotesk", sans-serif !important;
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.gradient-border {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.05%, rgba(0, 0, 0, 0.2) 48.9%),
+    linear-gradient(180deg, rgba(49, 58, 91, 0) -19.57%, #313a5b 98.8%, rgba(49, 58, 91, 0.22) 130.43%);
+}
+.gradient-button {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  box-shadow: 0px 14px 20px 0px rgba(42, 51, 83, 0.8);
+}
+.swiper-pagination-bullets {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.swiper-pagination-bullets-active {
+  color: white !important;
+}
+.gradient-cards {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #8ce3e6 0%, #91c06d 46.35%, #f39e5d 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(114deg, rgba(49, 58, 91, 0.33) -21.49%, rgba(49, 58, 91, 0) 111.75%);
+  box-shadow: 50px 60px 120px 0px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(70px);
+}
+.gradient-sm-filter {
+  background: linear-gradient(270deg, #8ce3e6 0%, #91bc60 46.77%, #f39b5c 100%);
+}
+
+.border-gradient {
+  position: relative;
+}
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(0deg, #ffffff00, #ffffff22, #ffffff90);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.border-gradient-light {
+  position: relative;
+}
+.border-gradient-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(0deg, #ffffff00, #ffffff31);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.border-gradient-light-rounded {
+  position: relative;
+}
+.border-gradient-light-rounded::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 1px;
+  background: linear-gradient(0deg, #ffffff00, #2a335352, #2a3353);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.border-top-gradient {
+  border-top-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgba(236, 34, 39, 0) 20%, #8ce3e6 40.62%, #f38556 60.42%, rgba(249, 155, 24, 0) 80%) 1;
+}
+.border-top-gradient-light {
+  position: relative;
+}
+.border-top-gradient-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  transform: translateY(-1px);
+  background: linear-gradient(4deg, #ffffff00, #ffffff00, #ffffff70);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.button-gradient-sm {
+  position: relative;
+}
+.button-gradient-sm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(0deg, #ffffff00, #ffffff20);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.button-gradient-sm::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(180deg, #ffffff00, #000000);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.card-gradients {
+  position: relative;
+}
+.card-gradients::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(90deg, #f3985b, #8ce3e6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.ReactCollapse--collapse {
+  transition: height 150ms;
+}
