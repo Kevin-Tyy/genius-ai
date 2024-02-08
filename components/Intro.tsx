@@ -4,9 +4,6 @@ import styled from "styled-components";
 
 const Intro = () => {
   const scroll = useRef<any>(null);
-  const InputContainer = styled.div`
-    background: linear-gradient(90deg, rgba(17, 16, 24, 0) 0.28%, rgba(17, 16, 24, 0.51) 129.42%);
-  `;
 
   const ScrollButton = styled.button`
     filter: drop-shadow(0px -4px 4px rgba(248, 249, 250, 0.2));
@@ -40,7 +37,7 @@ const Intro = () => {
                 blogs, articles, websites, social media and more.
               </p>
               <form>
-                <InputContainer className="flex w-full max-w-3xl flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl">
+                <div className="flex w-full max-w-3xl flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
                   <div className="w-full flex space-x-4 items-center justify-center">
                     <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
                       <Image src="/search.svg" alt="search" width={32} height={32} />
@@ -51,7 +48,7 @@ const Intro = () => {
                     <Image src="/play.svg" alt="search" width={24} height={24} />
                     <p className="hidden md:block">Start Free Trial</p>
                   </button>
-                </InputContainer>
+                </div>
               </form>
             </div>
           </div>

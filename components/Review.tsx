@@ -14,18 +14,21 @@ import ReviewCard from "./cards/ReviewCard";
 const Review = () => {
   return (
     <div className="space-y-10">
-      <div className="px-3 md:px-12 mt-16">
+      <div className="px-3 md:px-12 mt-32">
         <div className="w-full max-w-[1560px] mx-auto">
-          <div className="flex items-center gap-5">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">
-              Over 10,000+
-              <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent"> Reviews</span>
-            </h1>
-            <Image src="/union.svg" alt="union" width={180} height={1} />
+          <div className="flex justify-between items-center gap-5">
+            <div className="flex items-center gap-5">
+              <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">
+                Over 10,000+
+                <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent"> Reviews</span>
+              </h1>
+              <Image src="/union.svg" alt="union" width={140} height={1} />
+            </div>
+            <SwiperNavButtons />
           </div>
         </div>
       </div>
-      <div className="flex cursor-grab active:cursor-grabbing">
+      <div className="relative flex h-[400px] px-3 md:px-4">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={25}
@@ -41,11 +44,13 @@ const Review = () => {
               slidesPerView: 5,
             },
           }}
-          navigation={true}
+          navigation={{
+            nextEl: ".button-next-slide",
+            prevEl: ".button-prev-slide",
+          }}
           pagination={{ clickable: true }}>
-          <SwiperNavButtons />
           {reviews.map((data, i) => (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} className="cursor-grab active:cursor-grabbing">
               <ReviewCard {...data} />
             </SwiperSlide>
           ))}

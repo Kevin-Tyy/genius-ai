@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <div className="flex justify-center absolute top-0 left-0 right-0 w-full">
       <header className="top-0 w-full px-4 md:px-16 py-6 z-[5]">
-        <div className="max-w-[1720px] mx-auto">
+        <div className="max-w-[1560px] mx-auto">
           <nav className="w-full flex  items-center justify-between">
             <Logo />
             <div className="w-10 grid place-content-center ml-6 lg:hidden">

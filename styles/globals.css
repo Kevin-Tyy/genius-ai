@@ -126,6 +126,10 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.05%, rgba(0, 0, 0, 0.2) 48.9%),
     linear-gradient(180deg, rgba(49, 58, 91, 0) -19.57%, #313a5b 98.8%, rgba(49, 58, 91, 0.22) 130.43%);
 }
+.gradient-border-light {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.05%, rgba(0, 0, 0, 0.2) 48.9%),
+    linear-gradient(180deg, rgba(49, 58, 91, 0) -19.57%, #99a9db 98.8%, rgba(49, 58, 91, 0.22) 130.43%);
+}
 .gradient-button {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.87);
@@ -275,4 +279,17 @@ body {
 
 .ReactCollapse--collapse {
   transition: height 150ms;
+}
+
+.swiper-pagination-bullet {
+  padding: 5px;
+  background-color: none !important;
+  border: 3px solid rgb(201, 201, 201) !important;
+  transition: 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  background: none !important;
+  position: relative !important;
+  border: 3px solid #f38556 !important;
 }

@@ -7,7 +7,7 @@ function PriceCards() {
     <div className="grid grid-cols-3 gap-4 md:gap-8 justify-center">
       {pricingPlans.map((plan) => (
         <div
-          className={`w-full h-auto rounded-3xl p-12 space-y-8 ${
+          className={`w-full h-auto rounded-3xl px-10 py-12 space-y-8 ${
             plan.title === "Professional" ? "gradient-cards text-black ring-0" : "gradient-card border-2 border-[#5c6a9e25]"
           }`}
           key={plan.title}>
@@ -16,8 +16,11 @@ function PriceCards() {
           <p className="">
             <span className="text-5xl font-bold">{plan.price}</span>/ {plan.time}
           </p>
-          <button className="button-gradient-sm gradient-border p-4 w-full max-w-sm rounded-xl space-x-3 flex items-center justify-center">
-            <p className="text-white font-semibold">Subscribe now</p>
+          <button
+            className={`p-4 w-full max-w-sm rounded-xl space-x-3 flex items-center justify-center ${
+              plan.title === "Professional" ? "border-gradient gradient-border" : "button-gradient-sm"
+            }`}>
+            <span className="text-white font-semibold">Subscribe now</span>
           </button>
           <div className="mt-4">
             {plan.access.map((acc, index) => (

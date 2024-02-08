@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChooseCardData } from "@/app/utils/constants";
 import ChooseCards from "../cards/ChooseCards";
 import Image from "next/image";
@@ -13,7 +13,7 @@ const Choose = () => {
               <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">
                 Why Choose <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">ToolsAi</span>
               </h1>
-              <Image src="/union.svg" alt="union" width={180} height={2} />
+              <Image src="/union.svg" alt="union" width={140} height={2} />
             </div>
             <p className="text-[#F8F9FA] md:text-base lg:text-lg max-w-3xl leading-loose fontno">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
