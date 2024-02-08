@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import SwiperNavButtons from "./buttons/SwiperButton";
+import SwiperNavButtons from "../../../../components/buttons/SwiperButton";
 import Image from "next/image";
-import ReviewCard from "./cards/ReviewCard";
+import ReviewCard from "../../../../components/cards/ReviewCard";
 
 const Review = () => {
   return (

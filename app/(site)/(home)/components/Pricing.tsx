@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import PriceCards from "./cards/PriceCards";
-import { Switch } from "./ui/switch";
+import PriceCards from "../../../../components/cards/PriceCards";
+import { Switch } from "../../../../components/ui/switch";
 
 const Pricing = () => {
   return (

@@ -235,6 +235,22 @@ body {
   mask-composite: exclude;
   z-index: -1;
 }
+.border-gradient-dark {
+  position: relative;
+}
+.border-gradient-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  transform: translateY(-1px);
+  background: linear-gradient(90deg, #313a5b, #313a5b39);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
 
 .button-gradient-sm {
   position: relative;
@@ -276,6 +292,21 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+.card-border-gradients {
+  position: relative;
+}
+.card-border-gradients::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  padding: 2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #313a5b60, #313a5b25);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
 
 .ReactCollapse--collapse {
   transition: height 150ms;
@@ -292,4 +323,8 @@ body {
   background: none !important;
   position: relative !important;
   border: 3px solid #f38556 !important;
+}
+
+.styled-border {
+  background: linear-gradient(90deg, rgba(243, 133, 86, 0) -2.67%, #f38556 5.01%, rgba(243, 133, 86, 0) 100%);
 }

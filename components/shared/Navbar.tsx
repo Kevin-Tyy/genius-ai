@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileSidebar from "./MobileSidebar";
 import { navLinks } from "@/app/utils/constants";
-import Button from "../styles/Button";
+import Button from "../buttons/Button";
 import Logo from "./Logo";
 
 export default function Navbar() {
@@ -38,8 +38,8 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-x-12">
               <div className="">
                 <ul className="text-[#FFFFFFE5] flex items-center gap-x-10">
-                  {navLinks.map((link) => (
-                    <li>
+                  {navLinks.map((link, index) => (
+                    <li key={index}>
                       <Link href={link.href}>
                         <span
                           className={`${

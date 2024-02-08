@@ -25,7 +25,7 @@ const FAQ = () => {
             </colgroup>
             <thead>
               {faqs.map((faq, index) => (
-                <tr className="border-b border-[#2A2B3A]">
+                <tr key={index} className="border-b border-[#2A2B3A]">
                   <td className=" text-2xl cursor-pointer flex items-start h-full px-6 py-10">0{index + 1}</td>
                   <td className="border border-[#2A2B3A] p-10">
                     <h1

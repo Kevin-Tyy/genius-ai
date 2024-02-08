@@ -1,6 +1,6 @@
 import React from "react";
 import { ChooseCardData } from "@/app/utils/constants";
-import ChooseCards from "../cards/ChooseCards";
+import ChooseCards from "./cards/ChooseCards";
 import Image from "next/image";
 
 const Choose = () => {

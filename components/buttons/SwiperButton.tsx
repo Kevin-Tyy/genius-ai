@@ -1,12 +1,6 @@
-import { Play } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import { FaPlay } from "react-icons/fa";
-import { useSwiper } from "swiper/react";
-
 export default function SlideButtons() {
-  const swiper = useSwiper();
-
   return (
     <div className="flex justify-end gap-5 mt-6 relative">
       <button className="button-prev-slide border-gradient-rounded gradient-border rounded-full p-1 ">

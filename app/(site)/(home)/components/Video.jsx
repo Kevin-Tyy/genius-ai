@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import VideoJS from "./client/VideoJs";
+import VideoJS from "../../../../components/client/VideoJs";
 
 const Video = () => {
   const playerRef = React.useRef(null);

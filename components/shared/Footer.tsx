@@ -30,7 +30,7 @@ function Footer() {
             <div className="space-y-5">
               <div className="flex items-center gap-3">
                 <Image src="/logo/tools-ai.svg" alt="icon" width={22} height={22} />
-                <h1 className="uppercase text- !mt-62xl">Tools AI</h1>
+                <h1 className="uppercase text-xl font-bold">Tools AI</h1>
               </div>
               <p className="max-w-[220px] leading-loose">Lorem ipsum dolor sit amet consectetur adipiscing elit Pharetra tortor nec </p>
             </div>

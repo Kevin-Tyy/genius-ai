@@ -37,14 +37,14 @@ const Intro = () => {
                 blogs, articles, websites, social media and more.
               </p>
               <form>
-                <div className="flex w-full max-w-3xl flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
+                <div className="flex w-full max-w-3xl flex-row px-8 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
                   <div className="w-full flex space-x-4 items-center justify-center">
                     <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
                       <Image src="/search.svg" alt="search" width={32} height={32} />
                     </span>
-                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-full" />
+                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-[50px]" />
                   </div>
-                  <button className="w-full max-w-fit gradient-border py-4 px-8 rounded-lg space-x-3 flex items-center justify-center">
+                  <button className="w-full max-w-fit gradient-border py-4 px-8 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
                     <Image src="/play.svg" alt="search" width={24} height={24} />
                     <p className="hidden md:block">Start Free Trial</p>
                   </button>
