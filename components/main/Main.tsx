@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <main>
       <Intro />
-      <Video />
+      {/* <Video /> */}
       <Choose />
       <Templates />
       <Pricing />
