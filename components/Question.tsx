@@ -10,10 +10,10 @@ const Question = () => {
             <h1 className="text-3xl md:text-5xl font-bold !leading-normal">
               Have question? <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Call us 24/7</span>
             </h1>
-            <p className="text-center mt-4 md:mt-8">+91-45345217</p>
+            <p className="text-center mt-4 md:mt-8 text-lg">+91-45345217</p>
           </div>
           <form className="w-full">
-            <div className="bg-gradient-to-r from-[#11101800] to-[#00000080] flex w-full max-w-3xl mx-auto flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl">
+            <div className="bg-gradient-to-r from-[#11101800] to-[#00000080] flex w-full max-w-3xl mx-auto flex-row px-10 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-dark rounded-3xl">
               <div className="w-full flex space-x-4 items-center justify-center">
                 <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
                   <Image src="/mail.svg" alt="search" width={32} height={32} />

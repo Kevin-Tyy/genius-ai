@@ -45,7 +45,7 @@ const Intro = () => {
                     <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
                       <Image src="/search.svg" alt="search" width={32} height={32} />
                     </span>
-                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full" />
+                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-full" />
                   </div>
                   <button className="w-full max-w-fit gradient-border py-4 px-8 rounded-lg space-x-3 flex items-center justify-center">
                     <Image src="/play.svg" alt="search" width={24} height={24} />
