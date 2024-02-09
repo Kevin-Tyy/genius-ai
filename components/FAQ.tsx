@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import { faqs } from "./constants/faq";
@@ -8,7 +10,7 @@ const FAQ = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [currentItem, setCurrentItem] = useState(0);
   return (
-    <div className="px-3 md:px-12 mt-16">
+    <div className="px-3 md:px-12 mt-20">
       <div className="w-full max-w-[1560px] mx-auto h-full ">
         <span className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-5">
           <h1 className="text-3xl md:text-5xl font-bold !leading-normal">
