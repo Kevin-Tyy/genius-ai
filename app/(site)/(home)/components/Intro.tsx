@@ -26,7 +26,7 @@ const Intro = () => {
             <div className=" text-white max-w-4xl">
               <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15]  flex items-center justify-center">
                 <Image src="/circle.svg" alt="search" width={24} height={24} />
-                <p>No #1 Tool for AI</p>
+                <p className="text-[#F8F9FA] text-sm">No #1 Tool for AI</p>
               </button>
               <h1 className="text-3xl md:text-5xl xl:text-[58px] font-bold !leading-normal">
                 Use AI to Generate Creative{" "}

@@ -25,9 +25,9 @@ const BlogIntro = () => {
           <div className="flex items-center h-full">
             <div className="w-full">
               <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15]  flex items-center justify-center">
-                <Image src="/circle.png" alt="search" width={24} height={24} />
-                <p className="block">
-                  <span className="opacity-80">Home</span> {">"} Template
+                <Image src="/circle.svg" alt="search" width={24} height={24} />
+                <p className="block text-[#F8F9FA] text-sm">
+                  <span className="text-[#f8f9fa8c]">Home</span> {">"} Blogs
                 </p>
               </button>
               <h1 className="text-3xl md:text-5xl xl:text-[58px] font-bold !leading-normal">

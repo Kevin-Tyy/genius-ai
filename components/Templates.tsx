@@ -23,7 +23,9 @@ const Templates = () => {
                 <button
                   onClick={() => setActiveTemplate(filter.text)}
                   key={filter.text}
-                  className={`px-6 py-4 card-gradients rounded-xl ${activeTemplate === filter.text ? "gradient-sm-filter text-[#101010]" : ""}`}>
+                  className={`px-6 py-3.5 transition duration-300 card-gradients rounded-xl ${
+                    activeTemplate === filter.text ? "gradient-sm-filter text-[#101010]" : ""
+                  }`}>
                   {filter.text}
                 </button>
               ))}

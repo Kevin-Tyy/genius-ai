@@ -1,14 +1,12 @@
-"use client"
-import LoginPage from '@/components/Login';
-
+"use client";
+import LoginPage from "@/app/(auth)/login/components/Login";
 
 const Page = () => {
-
   return (
-    <div>
+    <div className="bg-[#101010]">
       <LoginPage />
     </div>
   );
 };
 
-export default Page; 
+export default Page;

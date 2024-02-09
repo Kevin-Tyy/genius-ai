@@ -307,6 +307,21 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+.input-border-gradients {
+  position: relative;
+}
+.input-border-gradients::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #313a5b60, #313a5b25);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
 
 .ReactCollapse--collapse {
   transition: height 150ms;
@@ -327,4 +342,8 @@ body {
 
 .styled-border {
   background: linear-gradient(90deg, rgba(243, 133, 86, 0) -2.67%, #f38556 5.01%, rgba(243, 133, 86, 0) 100%);
+}
+
+img {
+  user-select: none;
 }

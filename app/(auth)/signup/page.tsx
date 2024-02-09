@@ -1,14 +1,12 @@
-"use client"
-import SignUpPage from '@/components/Signup';
-
+"use client";
+import SignUpPage from "@/app/(auth)/signup/components/Signup";
 
 const Page = () => {
-
   return (
-    <div>
+    <div className="bg-[#101010]">
       <SignUpPage />
     </div>
   );
 };
 
-export default Page; 
+export default Page;
