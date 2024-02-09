@@ -4,7 +4,7 @@ import React from "react";
 
 function PriceCards() {
   return (
-    <div className="grid grid-cols-3 gap-4 md:gap-8 justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 justify-center">
       {pricingPlans.map((plan) => (
         <div
           className={`w-full h-auto rounded-3xl px-10 py-12 space-y-8 ${
