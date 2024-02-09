@@ -21,8 +21,8 @@ const StyledButton = styled.button`
 export default function BlogCard({ image, content, date, title }: Props) {
   return (
     <div className="flex justify-center px-2 md:px-0">
-      <div className={`relative w-full md:max-h-[764px] rounded-xl overflow-hidden`}>
-        <Image src={image} alt="" width={1400} height={1400} className="rounded-t-[30px]" />
+      <div className={`relative w-full md:h-[764px] rounded-xl overflow-hidden`}>
+        <Image src={image} alt="" width={1400} height={1400} className="rounded-t-[30px] w-full h-[338px]" />
         <div className="relative -top-14 w-full rounded-[30px] bg-gradient-to-tr from-[#171b27] via-[#11141dc2] to-[#1a1d2b59] backdrop-blur-3xl card-border-gradients p-10 space-y-6">
           <div className="flex flex-col justify-between gap-5">
             <span className="flex space-x-2 items-center">

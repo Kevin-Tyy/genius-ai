@@ -1,11 +1,29 @@
+"use client";
+
 import { blogs } from "@/app/(site)/blog/components/constants/blogs";
 import BlogCard from "@/components/cards/BlogCard";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RecentBlogs from "./RecentBlog";
 import Categories from "./Categories";
 import Tags from "./Tags";
+import Pagination from "./Pagination";
+import { BlogType } from "@/types";
+import Loader from "@/components/client/Loader";
 export default function Blog() {
+  const blogsPerPage = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [blogsInView, setBlogsInView] = useState<Array<BlogType> | null>(null);
+
+  useEffect(() => {
+    setBlogsInView(blogs.slice((currentPage - 1) * blogsPerPage, currentPage * blogsPerPage));
+  }, [currentPage]);
+
+  const totalPages = Math.ceil(blogs.length / blogsPerPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
   return (
     <div className="relative px-3 md:px-12">
       <div className="w-full max-w-[1560px] mx-auto h-full">
@@ -52,10 +70,19 @@ export default function Blog() {
             </div>
           </div>
           <div className="flex gap-x-5 mt-10">
-            <div className="w-full grid grid-cols-2 gap-5">
-              {blogs.slice(1).map((blog, index) => (
-                <BlogCard {...blog} key={index} />
-              ))}
+            <div className="w-full">
+              {!blogsInView ? (
+                <div className="h-[40vh] w-full grid place-content-center">
+                  <Loader />
+                </div>
+              ) : (
+                <div className="w-full grid grid-cols-2 gap-5">
+                  {blogsInView.slice(1).map((blog, index) => (
+                    <BlogCard {...blog} key={index} />
+                  ))}
+                </div>
+              )}
+              <Pagination currentPage={currentPage} totalPages={totalPages} onChangePage={handlePageChange} />
             </div>
             <div className="w-full max-w-[480px] space-y-6">
               <RecentBlogs />
