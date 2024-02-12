@@ -81,6 +81,18 @@
   }
 }
 
+*::-webkit-scrollbar {
+  width: 7px !important;
+}
+*::-webkit-scrollbar-track {
+  background: gainsboro !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #82b440 !important;
+  border-radius: 20px !important;
+}
+
 @font-face {
   font-family: "Craftwork Grotesk";
   src: url("../fonts/craftwork-grotesk/CraftworkGrotesk-Regular.ttf");
@@ -361,4 +373,11 @@ body {
 
 img {
   user-select: none;
+}
+
+.blurred-bg {
+  width: 252px;
+  height: 252px;
+  fill: linear-gradient(90deg, #8ce3e6 -13.92%, #82b440c7 48.48%, #febf32 120.1%);
+  filter: blur(200px);
 }

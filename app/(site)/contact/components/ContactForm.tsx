@@ -4,7 +4,9 @@ import React from "react";
 function ContactForm() {
   return (
     <div className="px-3 md:px-16 mt-32">
-      <div className="max-w-[1560px] mx-auto w-full">
+      <div className="relative max-w-[1560px] mx-auto w-full">
+        <Image src="/svgs/dotted-line-red.svg" alt="" width={6} height={10} className="absolute top-0 -left-24" />
+
         <span className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-5">
           <h1 className="text-3xl md:text-5xl font-bold !leading-normal">
             <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent"> Get In Touch</span> With Us

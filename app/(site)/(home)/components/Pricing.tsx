@@ -10,8 +10,11 @@ const Pricing = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="px-3 md:px-16 mt-20 xl:mt-32">
-      <div className="w-full max-w-[1560px] mx-auto space-y-10">
+    <div className="relative px-3 md:px-16 mt-20 xl:mt-32">
+      <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 -left-10 opacity-70" />
+      <div className="relative w-full max-w-[1560px] mx-auto space-y-10">
+        <Image src="/svgs/dotted-line-green.svg" alt="" width={5} height={10} className="absolute top-20 -left-24" draggable={false} />
+
         <div className="space-y-6">
           <div className="flex flex-wrap items-center gap-5">
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">

@@ -14,7 +14,8 @@ import ReviewCard from "../../../../components/cards/ReviewCard";
 const Review = () => {
   return (
     <div className="space-y-10">
-      <div className="px-3 md:px-12 mt-20 xl:mt-32">
+      <div className="relative px-3 md:px-12 mt-20 xl:mt-32">
+        <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 -right-10 opacity-80" />
         <div className="w-full max-w-[1560px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between md:items-center md:gap-5">
             <div className="flex flex-wrap items-center gap-5">

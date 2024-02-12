@@ -8,8 +8,9 @@ import Image from "next/image";
 const Templates = () => {
   const [activeTemplate, setActiveTemplate] = useState<string>("Business Tools");
   return (
-    <div className="px-3 md:px-12">
-      <div className="w-full max-w-[1560px] mx-auto mt-20 xl:mt-32">
+    <div className="relative px-3 md:px-12">
+      <div className="relative w-full max-w-[1560px] mx-auto mt-20 xl:mt-32">
+        <Image src="/svgs/dotted-line-red-lg.svg" alt="" width={5} height={10} className="absolute top-20 -right-20" draggable={false} />
         <div className="flex justify-center">
           <div className="">
             <div className="flex flex-wrap items-center gap-5">
@@ -45,6 +46,8 @@ const Templates = () => {
           </div>
         </div>
       </div>
+      <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 -right-10 opacity-70" />
+      <Image src="/svgs/stars.svg" alt="union" width={300} height={300} draggable={false} className="absolute -right-20 top-10 select-none" />
     </div>
   );
 };

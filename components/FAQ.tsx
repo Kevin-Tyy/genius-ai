@@ -10,8 +10,11 @@ const FAQ = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [currentItem, setCurrentItem] = useState(0);
   return (
-    <div className="px-3 md:px-12 mt-12 xl:mt-20">
-      <div className="w-full max-w-[1560px] mx-auto h-full ">
+    <div className="relative px-3 md:px-12 mt-12 xl:mt-20">
+      <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 -left-10 opacity-70" />
+      <div className="relative w-full max-w-[1560px] mx-auto h-full ">
+        <Image src="/svgs/dotted-line-red.svg" alt="" width={6} height={10} className="absolute top-20 -right-24" draggable={false} />
+
         <div className="flex flex-wrap items-center gap-5">
           <h1 className="text-3xl md:text-5xl font-bold !leading-normal">
             Frequently Asked <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Questions</span>
@@ -19,7 +22,7 @@ const FAQ = () => {
           <Image src="/union.svg" alt="union" width={140} height={2} />
         </div>
         <div className="overflow-hidden mt-8 md:mt-10">
-          <table className="table-auto w-full md:w-full border-collapse border border-[#2A2B3A]">
+          <table className="table-auto w-full md:w-full border-collapse border border-[#2A2B3A]/50">
             <colgroup>
               <col className="w-10" />
               <col className="w-auto" />
@@ -27,9 +30,9 @@ const FAQ = () => {
             </colgroup>
             <thead>
               {faqs.map((faq, index) => (
-                <tr key={index} className="border-b border-[#2A2B3A]">
+                <tr key={index} className="border-b border-[#2A2B3A]/50">
                   <td className=" text-2xl cursor-pointer flex items-start h-full px-3 py-5 sm:px-6 sm:py-10">0{index + 1}</td>
-                  <td className="border border-[#2A2B3A] p-5 sm:p-10">
+                  <td className="border border-[#2A2B3A]/50 p-5 sm:p-10">
                     <h1
                       className="font-semibold text-xl sm:text-2xl cursor-pointer leading-loose"
                       onClick={() => {

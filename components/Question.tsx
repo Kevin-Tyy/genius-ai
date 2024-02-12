@@ -3,7 +3,7 @@ import React from "react";
 
 const Question = () => {
   return (
-    <div className="px-3 md:px-12 mt-20">
+    <div className="px-3 md:px-12 mt-20 relative">
       <div className="w-full max-w-[1560px] mx-auto h-full ">
         <div className="relative w-full flex justify-center items-center rounded-3xl mx-auto bg-gradient-to-br from-[#313a5b54] to-[#313a5b00] border-2 border-[#5c6a9e30] px-5 sm:px-10 py-20">
           <Image src="/svgs/stars.svg" alt="" width={300} height={300} draggable={false} className="absolute left-4 select-none" />
@@ -28,9 +28,17 @@ const Question = () => {
               </div>
             </form>
           </div>
-          <Image src="/svgs/stars.svg" alt="" width={300} height={300} draggable={false} className="absolute right-4 select-none" />
+          <Image
+            src="/svgs/stars.svg"
+            alt=""
+            width={300}
+            height={300}
+            draggable={false}
+            className="absolute right-4 select-none opacity-0 md:opacity-100 transition-all duration-300"
+          />
         </div>
       </div>
+      <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 right-0 opacity-70" />
     </div>
   );
 };

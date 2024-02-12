@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import VideoJS from "../../../../components/client/VideoJs";
+import Image from "next/image";
 
 const Video = () => {
   const playerRef = React.useRef(null);
@@ -32,8 +33,11 @@ const Video = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center px-5 py-10 mx-auto">
-        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+      <div className="max-w-[1560px] mx-auto relative">
+        <div className="flex justify-center items-center px-5 py-10 mx-auto">
+          <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+        </div>
+        <Image src="/svgs/dotted-line-red.svg" alt="" width={6} height={10} className="absolute top-0 -right-20" draggable={false} />
       </div>
     </>
   );

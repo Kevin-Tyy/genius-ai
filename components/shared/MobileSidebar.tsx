@@ -69,9 +69,9 @@ export default function MobileSidebar({ onClose, isOpen }: Props) {
               LogIn
             </button>
           </Link>
-          <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
-            <button className="px-4 py-3 rounded-xl capitalize border-gradient gradient-border w-full relative">
-              <span className="relative">SignUp</span>
+          <Link href="/signup">
+            <button className="px-12 py-3.5 rounded-xl capitalize border-gradient gradient-border">
+              <span className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">SignUp</span>
             </button>
           </Link>
         </div>

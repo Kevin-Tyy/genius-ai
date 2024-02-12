@@ -20,11 +20,11 @@ const Intro = () => {
 
   return (
     <>
-      <div className="relative px-3 md:px-12 h-[85vh] overflow-hidden">
+      <div className="relative px-3 md:px-12 h-screen overflow-hidden">
         <div className="w-full max-w-[1560px] mx-auto h-full ">
           <div className="flex items-center h-full">
-            <div className=" text-white max-w-4xl">
-              <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15]  flex items-center justify-center">
+            <div className="relative text-white max-w-4xl">
+              <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15] flex items-center justify-center">
                 <Image src="/circle.svg" alt="search" width={24} height={24} />
                 <p className="text-[#F8F9FA] text-sm">No #1 Tool for AI</p>
               </button>
@@ -50,23 +50,19 @@ const Intro = () => {
                   </button>
                 </div>
               </form>
+              <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 right-16" />
             </div>
           </div>
-          <div className="absolute inset-0 bg-black/40 z-[-1]" />
-          <Image
-            src="/computer.png"
-            alt="computer"
-            layout="responsive"
-            className="absolute inset-0 z-[-2] h-full w-full max-h-[85vh] object-cover"
-            width={600}
-            height={600}
-          />
+          <div className="absolute inset-0 bg-black/40 z-[-2]" />
+          <Image src="/computer.png" alt="computer" className="absolute inset-0 z-[-3] h-full w-full object-cover" width={1920} height={1080} />
         </div>
       </div>
-      <div className="flex justify-center items-center" ref={scroll}>
-        <ScrollButton className="bg-[#141416] p-7 rounded-full -mt-[25px]" onClick={handleArrowDown} aria-label="Scroll down">
+      <div className="flex justify-center items-center relative overflow-" ref={scroll}>
+        <ScrollButton className="bg-[#141416] p-7 rounded-full -mt-[36px] relative z-[1]" onClick={handleArrowDown} aria-label="Scroll down">
           <Image src="/arrow-down.svg" alt="search" width={28} height={28} />
         </ScrollButton>
+        <div className="h-1 w-4/5 absolute top-0 right-0 bg-gradient-to-r from-transparent to-[#F3965B] blur-md" />
+        <div className="h-[2px] w-4/5 absolute right-0 top-0 bg-gradient-to-r from-transparent to-[#d788c680] blur-[2px] rounded-full" />
       </div>
     </>
   );

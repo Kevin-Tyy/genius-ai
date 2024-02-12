@@ -24,8 +24,10 @@ function Footer() {
   ];
   return (
     <footer className="mt-16 px-3 md:px-12">
-      <div className="w-full max-w-[1560px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-b-2 border-[#302A51]/50 pb-8">
+      <div className="relative w-full max-w-[1560px] mx-auto">
+        <Image src="/svgs/dotted-line-green-sm.svg" alt="" width={6} height={10} className="absolute top-0 -left-24" draggable={false} />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-b-2 border-[#302A51]/50 pb-8 gap-y-7">
           <div className="p-4 md:p-8 space-y-5 flex flex-col justify-between">
             <div className="space-y-5">
               <div className="flex items-center gap-3">

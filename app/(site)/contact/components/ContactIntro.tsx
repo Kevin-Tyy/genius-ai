@@ -21,7 +21,9 @@ const ContactIntro = () => {
   return (
     <>
       <div className="relative px-3 md:px-12 h-[90vh] md:h-[52vh] bg-black">
-        <div className="w-full max-w-[1560px] mx-auto h-full ">
+        <div className="blurred-bg absolute z-[1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-20 left-10" />
+
+        <div className="w-full max-w-[1560px] mx-auto h-full relative z-[2]">
           <div className="flex flex-col sm:flex-row justify-center items-center h-full gap-y-5">
             <div className="w-full">
               <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15] flex items-center justify-center">
@@ -37,7 +39,7 @@ const ContactIntro = () => {
             <Image src="/contact.svg" alt="search" width={300} height={500} />
           </div>
         </div>
-        <div className="flex justify-center items-center" ref={scroll}>
+        <div className="flex justify-center items-center relative z-[2]" ref={scroll}>
           <ScrollButton className="bg-[#141416] p-7 rounded-full -mt-[36px]" onClick={handleArrowDown} aria-label="Scroll down">
             <Image src="/arrow-down.svg" alt="search" width={28} height={28} />
           </ScrollButton>

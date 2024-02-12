@@ -56,8 +56,10 @@ export default function Navbar() {
                 <Link href="/login">
                   <button className="px-12 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize ">LogIn</button>
                 </Link>
-                <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
-                  <button className="px-12 py-3 rounded-xl capitalize border-gradient gradient-border">SignUp</button>
+                <Link href="/signup">
+                  <button className="px-12 py-3.5 rounded-xl capitalize border-gradient gradient-border">
+                    <span className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">SignUp</span>
+                  </button>
                 </Link>
               </div>
             </div>
