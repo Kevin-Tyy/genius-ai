@@ -20,9 +20,9 @@ const Intro = () => {
 
   return (
     <>
-      <div className="relative px-3 md:px-12 h-auto md:h-[85vh] overflow-hidden">
+      <div className="relative px-3 md:px-12 h-[85vh] overflow-hidden">
         <div className="w-full max-w-[1560px] mx-auto h-full ">
-          <div className="flex flex-col md:flex-row items-center h-full">
+          <div className="flex items-center h-full">
             <div className=" text-white max-w-4xl">
               <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15]  flex items-center justify-center">
                 <Image src="/circle.svg" alt="search" width={24} height={24} />
@@ -37,16 +37,16 @@ const Intro = () => {
                 blogs, articles, websites, social media and more.
               </p>
               <form>
-                <div className="flex w-full max-w-3xl flex-row px-8 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
-                  <div className="w-full flex space-x-4 items-center justify-center">
+                <div className="flex w-full max-w-3xl flex-row px-4 sm:px-8 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
+                  <div className="w-full flex space-x-2 sm:space-x-4 items-center justify-center">
                     <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
                       <Image src="/search.svg" alt="search" width={32} height={32} />
                     </span>
                     <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-[50px]" />
                   </div>
-                  <button className="w-full max-w-fit gradient-border py-4 px-8 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
+                  <button className="w-full max-w-fit gradient-border py-4 px-4 sm:px-8 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
                     <Image src="/play.svg" alt="search" width={24} height={24} />
-                    <p className="hidden md:block">Start Free Trial</p>
+                    <p>Start Free Trial</p>
                   </button>
                 </div>
               </form>

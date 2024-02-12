@@ -6,13 +6,11 @@ import { useRef, useEffect } from "react";
 
 import { navLinks } from "@/app/utils/constants";
 import Logo from "./Logo";
-import Button from "../buttons/Button";
 interface Props {
-  openModal: () => void;
   onClose: () => void;
   isOpen?: boolean;
 }
-export default function MobileSidebar({ openModal, onClose, isOpen }: Props) {
+export default function MobileSidebar({ onClose, isOpen }: Props) {
   const mainRef = useRef<HTMLElement | null>(null);
   const handleClickOutside = (event: any) => {
     if (mainRef.current && !mainRef.current.contains(event.target)) {
@@ -30,12 +28,12 @@ export default function MobileSidebar({ openModal, onClose, isOpen }: Props) {
     <nav
       ref={mainRef}
       className={`${
-        isOpen ? "w-[300px]" : "w-0"
+        isOpen ? "w-[300px] sm:w-[360px]" : "w-0"
       } overflow-hidden bg-[#101010] fixed right-0 top-0 bottom-0 h-screen shadow-2xl z-[9999999] transition-[width] duration-500`}>
-      <div className="pl-8 flex flex-col justify-between pt-6 pb-10 px-4 h-full">
+      <div className="flex flex-col justify-between py-6 px-5 h-full">
         <div className="flex items-center justify-between w-full">
           <Logo />
-          <div className="w-10 grid place-content-center ml-6 lg:hidden">
+          <div className="w-10 grid place-content-center ml-6 xl:hidden">
             <div
               className="flex flex-col items-end justify-center hover:bg-neutral-200/20 rounded-md transition duration-100 p-2 space-y-[7px] cursor-pointer  group"
               onClick={onClose}>
@@ -64,20 +62,16 @@ export default function MobileSidebar({ openModal, onClose, isOpen }: Props) {
             </Link>
           ))}
         </div>
-        <div className="space-x-2">
-          <button
-            onClick={() => {
-              onClose();
-              openModal();
-            }}
-            className="px-8 py-3 rounded-md border border-solid border-white border-opacity-87 font-semibold capitalize text-sm ">
+
+        <div className="space-x-2 flex">
+          <button onClick={onClose} className="px-4 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize w-full">
             <Link href="/login">LogIn</Link>
           </button>
-          <Button className="px-8 py-3 font-semibold capitalize text-sm text-[#8CE3E6] ">
-            <Link href="/signup">
-              Sign<span className="gradient-text">Up</span>
+          <button className="px-4 py-3 rounded-xl capitalize border-gradient gradient-border w-full">
+            <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
+              SignUp
             </Link>
-          </Button>
+          </button>
         </div>
       </div>
     </nav>

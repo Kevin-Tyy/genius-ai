@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Tags = () => {
   const [selectedTag, setSelctedTag] = useState("gpt-4");
   return (
-    <div className="w-full rounded-[30px] bg-gradient-to-tr from-[#171b27] via-[#11141dc2] to-[#1a1d2b59] backdrop-blur-3xl card-border-gradients p-10 space-y-8">
+    <div className="w-full rounded-[30px] bg-gradient-to-tr from-[#171b27] via-[#11141dc2] to-[#1a1d2b59] backdrop-blur-3xl card-border-gradients p-6 min-[400px]:p-10 space-y-8">
       <h1 className="text-2xl font-bold">Tags</h1>
       <div className="h-[2px] relative">
         <div className="w-full h-[4px] flex justify-center blur-[2px] styled-border" />

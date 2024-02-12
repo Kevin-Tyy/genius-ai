@@ -19,7 +19,7 @@ const Choose = () => {
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
             </p>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
               {ChooseCardData.map((item, i) => (
                 <div key={i} className="w-full mb-4 md:mb-0">
                   <ChooseCards iconUrl={item.iconUrl} title={item.title} description={item.description} buttonText="Learn More" play={true} />

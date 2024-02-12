@@ -10,15 +10,15 @@ const FAQ = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [currentItem, setCurrentItem] = useState(0);
   return (
-    <div className="px-3 md:px-12 mt-20">
+    <div className="px-3 md:px-12 mt-12 xl:mt-20">
       <div className="w-full max-w-[1560px] mx-auto h-full ">
-        <span className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-5">
+        <div className="flex flex-wrap items-center gap-5">
           <h1 className="text-3xl md:text-5xl font-bold !leading-normal">
             Frequently Asked <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Questions</span>
           </h1>
           <Image src="/union.svg" alt="union" width={140} height={2} />
-        </span>
-        <div className="overflow-hidden mt-5 md:mt-10">
+        </div>
+        <div className="overflow-hidden mt-8 md:mt-10">
           <table className="table-auto w-full md:w-full border-collapse border border-[#2A2B3A]">
             <colgroup>
               <col className="w-10" />
@@ -28,10 +28,10 @@ const FAQ = () => {
             <thead>
               {faqs.map((faq, index) => (
                 <tr key={index} className="border-b border-[#2A2B3A]">
-                  <td className=" text-2xl cursor-pointer flex items-start h-full px-6 py-10">0{index + 1}</td>
-                  <td className="border border-[#2A2B3A] p-10">
+                  <td className=" text-2xl cursor-pointer flex items-start h-full px-3 py-5 sm:px-6 sm:py-10">0{index + 1}</td>
+                  <td className="border border-[#2A2B3A] p-5 sm:p-10">
                     <h1
-                      className="font-semibold text-2xl cursor-pointer"
+                      className="font-semibold text-xl sm:text-2xl cursor-pointer leading-loose"
                       onClick={() => {
                         if (currentItem === index) {
                           return setIsOpen((prev) => !prev);
@@ -46,7 +46,7 @@ const FAQ = () => {
                     </Collapse>
                   </td>
                   <td
-                    className=" text-3xl cursor-pointer flex items-start h-full px-6 py-10"
+                    className=" text-3xl cursor-pointer flex items-start h-full  px-3 py-5 sm:px-6 sm:py-10"
                     onClick={() => {
                       if (currentItem === index) {
                         return setIsOpen((prev) => !prev);

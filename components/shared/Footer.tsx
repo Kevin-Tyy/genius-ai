@@ -25,7 +25,7 @@ function Footer() {
   return (
     <footer className="mt-16 px-3 md:px-12">
       <div className="w-full max-w-[1560px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-b-2 border-[#302A51]/50 pb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-b-2 border-[#302A51]/50 pb-8">
           <div className="p-4 md:p-8 space-y-5 flex flex-col justify-between">
             <div className="space-y-5">
               <div className="flex items-center gap-3">
@@ -79,11 +79,11 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mt-10 mb-12">
+        <div className="flex flex-col-reverse gap-6 md:flex-row justify-between items-center mt-10 mb-12">
           <h1 className="mb-2 md:mb-0 text-sm">
             copyright @ 2022, <span className="text-[#F39E5D]">AI Tools</span> All Right Reserved
           </h1>
-          <div className="flex space-x-8 text-sm">
+          <div className="flex w-full sm:w-fit justify-between space-x-8 text-sm">
             <p>Privacy Policy</p>
             <p>Terms & Conditions</p>
           </div>

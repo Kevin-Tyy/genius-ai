@@ -10,14 +10,13 @@ import Logo from "./Logo";
 export default function Navbar() {
   const pathname = usePathname();
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="flex justify-center absolute top-0 left-0 right-0 w-full">
-      <header className="top-0 w-full px-4 md:px-16 py-6 z-[5]">
+      <header className="top-0 w-full px-4 md:px-12 py-6 z-[5]">
         <div className="max-w-[1560px] mx-auto">
           <nav className="w-full flex  items-center justify-between">
             <Logo />
-            <div className="w-10 grid place-content-center ml-6 lg:hidden">
+            <div className="w-10 grid place-content-center ml-6 xl:hidden">
               <div
                 className="flex flex-col items-end justify-center hover:bg-neutral-100/20 rounded-md transition duration-100 p-2 space-y-[7px] cursor-pointer group"
                 onClick={() => setIsExpanded(true)}>
@@ -35,7 +34,7 @@ export default function Navbar() {
                   }`}></span>
               </div>
             </div>
-            <div className="hidden lg:flex items-center gap-x-12">
+            <div className="hidden xl:flex items-center gap-x-12">
               <div className="">
                 <ul className="text-[#FFFFFFE5] flex items-center gap-x-10">
                   {navLinks.map((link, index) => (
@@ -54,10 +53,10 @@ export default function Navbar() {
                 </ul>
               </div>
               <div className="flex gap-x-5">
-                <button onClick={() => setIsModalOpen(true)} className="px-12 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize ">
+                <button className="px-12 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize ">
                   <Link href="/login">LogIn</Link>
                 </button>
-                <button onClick={() => setIsModalOpen(true)} className="px-12 py-3 rounded-xl capitalize border-gradient gradient-border">
+                <button className="px-12 py-3 rounded-xl capitalize border-gradient gradient-border">
                   <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
                     SignUp
                   </Link>
@@ -66,7 +65,7 @@ export default function Navbar() {
             </div>
           </nav>
         </div>
-        <MobileSidebar openModal={() => setIsModalOpen(true)} onClose={() => setIsExpanded(false)} isOpen={isExpanded} />
+        <MobileSidebar onClose={() => setIsExpanded(false)} isOpen={isExpanded} />
       </header>
     </div>
   );

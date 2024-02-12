@@ -11,8 +11,8 @@ function ContactForm() {
           </h1>
           <Image src="/union.svg" alt="union" width={180} height={2} />
         </span>
-        <form className="mt-10 w-full rounded-[30px] bg-gradient-to-br from-[#313a5b54] to-[#313a5b00]  backdrop-blur-3xl card-border-gradients p-24">
-          <div className="flex justify-center w-full gap-20">
+        <form className="mt-10 w-full rounded-[30px] bg-gradient-to-br from-[#313a5b54] to-[#313a5b00]  backdrop-blur-3xl card-border-gradients px-4 py-10 min-[400px]:px-6 md:p-12 xl:p-24">
+          <div className="flex flex-col lg:flex-row justify-center w-full gap-12 xl:gap-20">
             <div className="flex flex-col items-center space-y-12 w-full">
               <div className="border-b-[3px] border-[#1f242b] h-[50px] w-full">
                 <input type="text" id="name" name="name" placeholder="Your Name Here" className="bg-transparent outline-none w-full" />

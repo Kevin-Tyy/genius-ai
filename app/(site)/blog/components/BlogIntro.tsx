@@ -20,9 +20,9 @@ const BlogIntro = () => {
 
   return (
     <>
-      <div className="relative px-3 md:px-12 h-auto md:h-[52vh] bg-black">
-        <div className="w-full max-w-[1560px] mx-auto h-full ">
-          <div className="flex items-center h-full">
+      <div className="relative px-3 md:px-12 h-[90vh] md:h-[52vh] bg-black">
+        <div className="w-full max-w-[1560px] mx-auto h-full">
+          <div className="flex flex-col sm:flex-row justify-center items-center h-full gap-y-5">
             <div className="w-full">
               <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15]  flex items-center justify-center">
                 <Image src="/circle.svg" alt="search" width={24} height={24} />

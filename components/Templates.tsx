@@ -9,16 +9,16 @@ const Templates = () => {
   const [activeTemplate, setActiveTemplate] = useState<string>("Business Tools");
   return (
     <div className="px-3 md:px-12">
-      <div className="w-full max-w-[1560px] mx-auto mt-32">
+      <div className="w-full max-w-[1560px] mx-auto mt-20 xl:mt-32">
         <div className="flex justify-center">
           <div className="">
-            <div className="flex items-center gap-5">
+            <div className="flex flex-wrap items-center gap-5">
               <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">
                 <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">60+</span> Build-In Templates to Use
               </h1>
               <Image src="/union.svg" alt="union" width={140} height={2} />
             </div>
-            <div className="flex flex-wrap gap-4 mt-4 md:mt-8">
+            <div className="flex flex-wrap gap-4 mt-8">
               {FilterTemplates.map((filter) => (
                 <button
                   onClick={() => setActiveTemplate(filter.text)}
@@ -30,7 +30,7 @@ const Templates = () => {
                 </button>
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10 md:mt-16">
               {templateCardsData.map((item, i) => (
                 <div key={i} className="w-full">
                   <ChooseCards iconUrl={item.iconUrl} title={item.title} description={item.description} buttonText="view" play={false} />

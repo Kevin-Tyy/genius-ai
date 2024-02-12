@@ -14,10 +14,10 @@ import ReviewCard from "../../../../components/cards/ReviewCard";
 const Review = () => {
   return (
     <div className="space-y-10">
-      <div className="px-3 md:px-12 mt-32">
+      <div className="px-3 md:px-12 mt-20 xl:mt-32">
         <div className="w-full max-w-[1560px] mx-auto">
-          <div className="flex justify-between items-center gap-5">
-            <div className="flex items-center gap-5">
+          <div className="flex flex-col md:flex-row justify-between md:items-center md:gap-5">
+            <div className="flex flex-wrap items-center gap-5">
               <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold !leading-normal">
                 Over 10,000+
                 <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent"> Reviews</span>
@@ -37,10 +37,16 @@ const Review = () => {
             640: {
               slidesPerView: 1,
             },
-            768: {
+            868: {
               slidesPerView: 2,
             },
-            1024: {
+            1124: {
+              slidesPerView: 3,
+            },
+            1560: {
+              slidesPerView: 4,
+            },
+            1820: {
               slidesPerView: 5,
             },
           }}

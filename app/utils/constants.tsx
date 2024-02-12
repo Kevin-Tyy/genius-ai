@@ -134,8 +134,8 @@ export const pricingPlans = [
   {
     title: "Free Plan",
     description: "Ideal for individuals who need quick access to basic features.",
-    price: "$0",
-    time: "Monthly",
+    priceMonthly: "$0",
+    priceYearly: "$0",
     access: [
       {
         limit: "5k+ Monthly Word Limit",
@@ -155,8 +155,8 @@ export const pricingPlans = [
   {
     title: "Professional",
     description: "Ideal for individuals who who need advanced features and tools for client work.",
-    price: "$14.99",
-    time: "Monthly",
+    priceMonthly: "$14.99",
+    priceYearly: "$149.99",
     access: [
       {
         limit: "30k+ Monthly Word Limit",
@@ -176,8 +176,8 @@ export const pricingPlans = [
   {
     title: "Enterprise",
     description: "Ideal for businesses who need personalized services and security for large teams.",
-    price: "$38.99",
-    time: "Monthly",
+    priceMonthly: "$38.99",
+    priceYearly: "$459.99",
     access: [
       {
         limit: "50k+ Monthly Word Limit",
