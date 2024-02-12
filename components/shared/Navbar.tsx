@@ -53,14 +53,12 @@ export default function Navbar() {
                 </ul>
               </div>
               <div className="flex gap-x-5">
-                <button className="px-12 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize ">
-                  <Link href="/login">LogIn</Link>
-                </button>
-                <button className="px-12 py-3 rounded-xl capitalize border-gradient gradient-border">
-                  <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
-                    SignUp
-                  </Link>
-                </button>
+                <Link href="/login">
+                  <button className="px-12 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize ">LogIn</button>
+                </Link>
+                <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
+                  <button className="px-12 py-3 rounded-xl capitalize border-gradient gradient-border">SignUp</button>
+                </Link>
               </div>
             </div>
           </nav>

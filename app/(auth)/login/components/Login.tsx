@@ -14,11 +14,11 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="h-screen">
-      <div className="px-3 md:px-12 h-full">
+    <div className="lg:h-screen">
+      <div className="px-3 md:px-12 pb-20 h-full">
         <div className="h-full w-full max-w-[1360px] mx-auto">
-          <div className="w-full h-full flex justify-center items-center gap-20">
-            <div className={`w-full max-w-[640px] p-8 space-y-16`}>
+          <div className="w-full h-full flex justify-center items-center gap-10 2xl:gap-20">
+            <div className={`w-full max-w-[640px] p-3 min-[400px]:p-4 sm:p-8 space-y-16`}>
               <Logo />
               <div className="space-y-8">
                 <h1 className="text-2xl md:text-3xl lg:text-[42px] font-bold capitalize">Log In to your account</h1>
@@ -66,7 +66,7 @@ const LoginPage = () => {
                 </form>
               </div>
             </div>
-            <div className={`relative rounded-md overflow-hidden w-full h-full`}>
+            <div className={`relative rounded-md overflow-hidden w-full h-full hidden lg:block`}>
               <Image src="/Card.png" alt="tool" layout="fill" objectFit="contain" />
             </div>
           </div>

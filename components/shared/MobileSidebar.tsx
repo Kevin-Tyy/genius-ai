@@ -64,14 +64,16 @@ export default function MobileSidebar({ onClose, isOpen }: Props) {
         </div>
 
         <div className="space-x-2 flex">
-          <button onClick={onClose} className="px-4 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize w-full">
-            <Link href="/login">LogIn</Link>
-          </button>
-          <button className="px-4 py-3 rounded-xl capitalize border-gradient gradient-border w-full">
-            <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
-              SignUp
-            </Link>
-          </button>
+          <Link href="/login">
+            <button onClick={onClose} className="px-4 py-3 rounded-xl border-[3px] border-[#ffffff50] capitalize w-full">
+              LogIn
+            </button>
+          </Link>
+          <Link href="/signup" className="bg-gradient-to-r from-[#8CE3E6] to-[#F38556] bg-clip-text text-transparent font-semibold ">
+            <button className="px-4 py-3 rounded-xl capitalize border-gradient gradient-border w-full relative">
+              <span className="relative">SignUp</span>
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
