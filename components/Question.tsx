@@ -1,3 +1,4 @@
+import Motion from "@/providers/Motion";
 import Image from "next/image";
 import React from "react";
 
@@ -9,23 +10,28 @@ const Question = () => {
           <Image src="/svgs/stars.svg" alt="" width={300} height={300} draggable={false} className="absolute left-4 select-none" />
           <div className="w-full relative z-[1]">
             <div>
-              <h1 className="text-center text-3xl md:text-5xl font-bold !leading-normal">
-                Have a question? <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Call us 24/7</span>
-              </h1>
+              <Motion transition={{ duration: 0.5, delay: 0.1 }} variants={{ hidden: { opacity: 0, x: -25 }, visible: { opacity: 1, x: 0 } }}>
+                <h1 className="text-center text-3xl md:text-5xl font-bold !leading-normal">
+                  Have a question?{" "}
+                  <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Call us 24/7</span>
+                </h1>
+              </Motion>
               <p className="text-center mt-4 md:mt-8 text-lg md:text-xl">+91-45345217</p>
             </div>
             <form className="w-full">
-              <div className="bg-gradient-to-r from-[#11101800] to-[#00000080] flex w-full max-w-3xl mx-auto flex-row px-3 sm:px-6 py-4 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-dark rounded-3xl">
-                <div className="w-full flex space-x-2  sm:space-x-4 items-center justify-center">
-                  <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
-                    <Image src="/mail.svg" alt="search" width={32} height={32} />
-                  </span>
-                  <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-[50px]" />
+              <Motion transition={{ duration: 0.5, delay: 0.2 }} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                <div className="bg-gradient-to-r from-[#11101800] to-[#00000080] flex w-full max-w-3xl mx-auto flex-row px-3 sm:px-6 py-4 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-dark rounded-3xl">
+                  <div className="w-full flex space-x-2  sm:space-x-4 items-center justify-center">
+                    <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
+                      <Image src="/mail.svg" alt="search" width={32} height={32} />
+                    </span>
+                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-[50px]" />
+                  </div>
+                  <button className="w-full max-w-[150px] sm:max-w-[216px] shadow-lg shadow-black gradient-border py-4 px-4 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
+                    <p>Get Started</p>
+                  </button>
                 </div>
-                <button className="w-full max-w-[150px] sm:max-w-[216px] shadow-lg shadow-black gradient-border py-4 px-4 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
-                  <p>Get Started</p>
-                </button>
-              </div>
+              </Motion>
             </form>
           </div>
           <Image

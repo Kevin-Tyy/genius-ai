@@ -13,6 +13,7 @@
     "@types/react-collapse": "^5.0.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "framer-motion": "^11.0.4",
     "lucide-react": "^0.323.0",
     "next": "14.0.4",
     "next-nprogress-bar": "^2.1.2",

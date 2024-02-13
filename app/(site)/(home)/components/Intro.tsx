@@ -1,3 +1,4 @@
+import Motion from "@/providers/Motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 import styled from "styled-components";
@@ -24,32 +25,34 @@ const Intro = () => {
         <div className="w-full max-w-[1560px] mx-auto h-full ">
           <div className="flex items-center h-full">
             <div className="relative text-white max-w-4xl">
-              <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15] flex items-center justify-center">
-                <Image src="/circle.svg" alt="search" width={24} height={24} />
-                <p className="text-[#F8F9FA] text-sm">No #1 Tool for AI</p>
-              </button>
-              <h1 className="text-3xl md:text-5xl xl:text-[58px] font-bold !leading-normal">
-                Use AI to Generate Creative{" "}
-                <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Blog Ideas & Outlines</span>
-              </h1>
-              <p className="mt-4 md:mt-8 text-lg leading-loose text-[#F8F9FA]">
-                AI Copywriting is revolutionizing the way content is created. AI can create content for <br />
-                blogs, articles, websites, social media and more.
-              </p>
-              <form>
-                <div className="flex w-full max-w-3xl flex-row px-4 sm:px-8 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
-                  <div className="w-full flex space-x-2 sm:space-x-4 items-center justify-center">
-                    <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
-                      <Image src="/search.svg" alt="search" width={32} height={32} />
-                    </span>
-                    <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-[50px]" />
+              <Motion transition={{ duration: 0.5 }} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}>
+                <button className="px-6 py-4 mb-4 rounded-xl space-x-3 border-gradient-light bg-gradient-to-b from-[#ffffff20] to-[#ffffff15] flex items-center justify-center">
+                  <Image src="/circle.svg" alt="search" width={24} height={24} />
+                  <p className="text-[#F8F9FA] text-sm">No #1 Tool for AI</p>
+                </button>
+                <h1 className="text-3xl md:text-5xl xl:text-[58px] font-bold !leading-normal">
+                  Use AI to Generate Creative{" "}
+                  <span className="bg-gradient-to-r from-[#8CE3E6] via-[#91BC5D] to-[#F3985B] bg-clip-text text-transparent">Blog Ideas & Outlines</span>
+                </h1>
+                <p className="mt-4 md:mt-8 text-lg leading-loose text-[#F8F9FA]">
+                  AI Copywriting is revolutionizing the way content is created. AI can create content for <br />
+                  blogs, articles, websites, social media and more.
+                </p>
+                <form>
+                  <div className="flex w-full max-w-3xl flex-row px-4 sm:px-8 py-6 justify-between gap-2 items-center mt-12 border-top-gradient border-top-gradient-light rounded-3xl bg-gradient-to-r from-[#11101800] to-[#11101882]">
+                    <div className="w-full flex space-x-2 sm:space-x-4 items-center justify-center">
+                      <span className="gradient-border rounded-full p-3 border-gradient-light-rounded">
+                        <Image src="/search.svg" alt="search" width={32} height={32} />
+                      </span>
+                      <input type="email" placeholder="Write Your Email Adress" className="bg-transparent outline-none text-white w-full h-[50px]" />
+                    </div>
+                    <button className="w-full max-w-fit gradient-border py-4 px-4 sm:px-8 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
+                      <Image src="/play.svg" alt="search" width={24} height={24} />
+                      <p>Start Free Trial</p>
+                    </button>
                   </div>
-                  <button className="w-full max-w-fit gradient-border py-4 px-4 sm:px-8 rounded-xl space-x-3 flex items-center justify-center button-gradient-sm">
-                    <Image src="/play.svg" alt="search" width={24} height={24} />
-                    <p>Start Free Trial</p>
-                  </button>
-                </div>
-              </form>
+                </form>
+              </Motion>
               <div className="blurred-bg absolute z-[-1] h-24 w-24 bg-gradient-to-br from-[#8ce3e6] via-[#82b440c7] to-[#febf32] top-0 right-16" />
             </div>
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { ChooseCardData } from "@/app/utils/constants";
 import ChooseCards from "./cards/ChooseCards";
 import Image from "next/image";
+import Motion from "@/providers/Motion";
 
 const Choose = () => {
   return (
@@ -25,9 +26,11 @@ const Choose = () => {
 
             <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
               {ChooseCardData.map((item, i) => (
-                <div key={i} className="w-full mb-4 md:mb-0">
-                  <ChooseCards iconUrl={item.iconUrl} title={item.title} description={item.description} buttonText="Learn More" play={true} />
-                </div>
+                <Motion key={i} transition={{ duration: 0.5, delay: 0.1 * i }} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}>
+                  <div className="w-full mb-4 md:mb-0">
+                    <ChooseCards iconUrl={item.iconUrl} title={item.title} description={item.description} buttonText="Learn More" play={true} />
+                  </div>
+                </Motion>
               ))}
             </div>
           </div>

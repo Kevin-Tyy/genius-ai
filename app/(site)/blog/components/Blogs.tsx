@@ -10,7 +10,8 @@ import Tags from "./Tags";
 import Pagination from "./Pagination";
 import { BlogType } from "@/types";
 import Loader from "@/components/client/Loader";
-export default function Blog() {
+import Motion from "@/providers/Motion";
+export default function Blogs() {
   const blogsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const [blogsInView, setBlogsInView] = useState<Array<BlogType> | null>(null);
@@ -78,7 +79,9 @@ export default function Blog() {
               ) : (
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-5">
                   {blogsInView.slice(1).map((blog, index) => (
-                    <BlogCard {...blog} key={index} />
+                    <Motion transition={{ duration: 0.5, delay: 0.2 * index }} variants={{ hidden: { opacity: 0, x: -25 }, visible: { opacity: 1, x: 0 } }}>
+                      <BlogCard {...blog} key={index} />
+                    </Motion>
                   ))}
                 </div>
               )}

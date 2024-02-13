@@ -1,6 +1,6 @@
 "use client";
 
-import Blog from "@/app/(site)/blog/components/Blog";
+import Blogs from "@/app/(site)/blog/components/Blogs";
 import BlogIntro from "@/app/(site)/blog/components/BlogIntro";
 import Question from "@/components/Question";
 
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <BlogIntro />
-      <Blog />
+      <Blogs />
       <Question />
     </div>
   );

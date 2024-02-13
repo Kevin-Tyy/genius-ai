@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { FilterTemplates, templateCardsData } from "@/app/utils/constants";
 import ChooseCards from "./cards/ChooseCards";
 import Image from "next/image";
+import Motion from "@/providers/Motion";
 
 const Templates = () => {
   const [activeTemplate, setActiveTemplate] = useState<string>("Business Tools");
@@ -33,9 +34,11 @@ const Templates = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10 md:mt-16">
               {templateCardsData.map((item, i) => (
-                <div key={i} className="w-full">
-                  <ChooseCards iconUrl={item.iconUrl} title={item.title} description={item.description} buttonText="view" play={false} />
-                </div>
+                <Motion key={i} transition={{ duration: 0.5, delay: 0.1 * i }} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}>
+                  <div className="w-full">
+                    <ChooseCards iconUrl={item.iconUrl} title={item.title} description={item.description} buttonText="view" play={false} />
+                  </div>
+                </Motion>
               ))}
             </div>
             <div className="flex justify-center mt-12">
